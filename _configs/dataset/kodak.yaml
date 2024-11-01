@@ -1,0 +1,4 @@
+name: "kodak"
+root: "/extra/ucibdl0/shared/data/Kodak_rh"
+image_size: 256
+channels: 3

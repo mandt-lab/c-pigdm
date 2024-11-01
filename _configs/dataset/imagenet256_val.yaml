@@ -1,0 +1,11 @@
+# Copyright (c) 2023, NVIDIA CORPORATION.  All rights reserved
+
+name: "ImageNet_256x256"
+root: "/extra/ucibdl0/shared/data/ilsvrc2012/pro/"
+split: "val"
+image_size: 256
+channels: 3
+# meta_root: "/extra/ucibdl0/shared/data/ilsvrc2012/pro/"
+transform: "diffusion"
+#subset_txt: "/home/mmardani/research/stable-diffusion-sampling-gitlab/pgdm/misc/sr3_top1k.txt"  
+subset_txt: "/home/pandeyk1/conjugate-inverse-samplers/misc/sr3_top1k.txt"  

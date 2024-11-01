@@ -1,0 +1,10 @@
+# Copyright (c) 2023, NVIDIA CORPORATION.  All rights reserved
+
+name: "ImageNet_512x512"
+root: "/extra/ucibdl0/shared/data/ilsvrc2012/pro/"
+split: "val"
+image_size: 512
+channels: 3
+# meta_root: "/home/mmardani/research/datasets/imagenet-root"
+transform: "diffusion"
+subset_txt: "/home/pandeyk1/conjugate-inverse-samplers/misc/sr3_top1k.txt"  

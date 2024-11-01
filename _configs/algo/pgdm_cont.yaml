@@ -1,0 +1,7 @@
+name: pgdm_cont
+denoise: False
+lam: 0.0
+num_eps: 1e-9
+deg: bicubic4
+sigma_y: 0
+w: 1.0

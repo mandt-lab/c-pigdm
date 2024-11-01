@@ -1,0 +1,4 @@
+name: 'vp_conj'
+denoise: False
+lam: 0.0
+num_eps: 1e-9
