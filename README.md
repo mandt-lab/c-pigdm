@@ -75,7 +75,9 @@ python main.py \
         exp.save_ori=$save_ori \
         exp.save_deg=$save_deg \
         exp.smoke_test=$smoke_test
-``` 
+```
+## TODOs
+- Integrate the Conjugate Integrators for Flows
 
 ## Citation
 If you find the code useful for your research, please consider citing our paper:
