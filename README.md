@@ -13,7 +13,7 @@ Official Implementation of the paper: <a href='https://arxiv.org/abs/2405.17673'
 <img src='assets/main.png'>
 </center>
 
-We propose a method for fast sampler based on Conjugate Integrators for solving inverse problems using pretrained diffusion or flow models. Also see our official [project page](https://kpandey008.github.io/c-pigdm/) for qualitative results.
+We propose a method for fast sampler based on Conjugate Integrators for solving inverse problems using pretrained diffusion or flow models. Also see our official [project page](https://mandt-lab.github.io/c-pigdm/) for qualitative results.
 
 ## Code Setup
 
