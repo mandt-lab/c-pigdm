@@ -17,23 +17,27 @@ We propose a method for fast sampler based on Conjugate Integrators for solving 
 
 ## Code Setup
 
-This repo builds on top of the official [RED-Diff](https://github.com/NVlabs/RED-diff) implementation. Please clone the repo with `c-pigdm` as the working directory for downstream tasks like setting up the dependencies, and inference.
+This repo builds on top of the official [RED-Diff](https://github.com/NVlabs/RED-diff) and official [Rectified Flow](https://github.com/gnobitab/RectifiedFlow) implementations. Please clone the repo and `cd` to either `diffusion` or `flow` as the working directory for downstream tasks like setting up the dependencies, and inference.
 
 ## Dependency Setup
 
-Our `requirements.txt` file can be used to setup a conda environment directly using the following command:
+**Diffusion:** Our `requirements.txt` file can be used to setup a conda environment directly using the following command:
 
 ```
 conda create --name <env> --file requirements.txt
 ```
 
+**Flow:** Please see [Rectified Flow](https://github.com/gnobitab/RectifiedFlow) for setting up the dependencies.
+
 ## Setting up Pretrained Checkpoints
-In this work we use pretrained unconditional ImageNet checkpoints from the [ADM](https://github.com/openai/guided-diffusion) repository. We use an pretrained unconditional FFHQ checkpoint from the [DPS](https://github.com/DPS2022/diffusion-posterior-sampling) repository 
+**Diffusion:** In this work we use pretrained unconditional ImageNet checkpoints from the [ADM](https://github.com/openai/guided-diffusion) repository. We use an pretrained unconditional FFHQ checkpoint from the [DPS](https://github.com/DPS2022/diffusion-posterior-sampling) repository 
+
+**Flow:** We use pretrained weight from [Rectified Flow](https://github.com/gnobitab/RectifiedFlow), with some additional packages including `pytorch_msssim`, `omegaconf`, `compressai`, `lpips` (mostly about evaluation and degradation transform).
 
 ## Config Management
-Config management is done using Hydra configs. All configs can be found in the directory `_configs/` with algorithm specific config in the `_configs/algo` directory.
+**Diffusion:** Config management is done using Hydra configs. All configs can be found in the directory `_configs/` with algorithm specific config in the `_configs/algo` directory.
 
-## Inference
+## Diffusion Inference
 
  We include a sample inference script used in this work in the directory `test_scripts/test.sh`. For instance, using the noiseless linear Conjugate $\Pi$-GDM for a 4x super-resolution task using 5 sampling steps can be performed using the following command:
 
@@ -76,8 +80,8 @@ python main.py \
         exp.save_deg=$save_deg \
         exp.smoke_test=$smoke_test
 ```
-## TODOs
-- Integrate the Conjugate Integrators for Flows
+## Flow Inference
+See `run.sh` in the `flow` directory for running the inference on the flow model.
 
 ## Citation
 If you find the code useful for your research, please consider citing our paper:
