@@ -145,7 +145,6 @@ class ImageNet(torchvision.datasets.ImageFolder):
         Returns:
             tuple: (sample, target) where target is class_index of the target class.
         """
-        index = 259
         path, target = self.samples[index]
         sample = self.loader(path)
         if self.transform is not None:
